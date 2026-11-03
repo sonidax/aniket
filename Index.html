@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aniket Patel | Nishiv Investment &amp; Insurance</title>
+<meta name="description" content="Aniket Patel — Angel One Channel Partner. Demat &amp; trading accounts, mutual funds, SIP, life, term, health and car insurance in Ahmedabad.">
+<meta name="theme-color" content="#F2F4F8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+  :root {
+    --bg: #F2F4F8;
+    --surface: #FFFFFF;
+    --surface-subtle: #F8FAFD;
+    --surface-tint: #EDF1F8;
+    --ink: #0E1A33;
+    --ink-2: #3F4B66;
+    --ink-3: #67748E;
+    --line: #E1E6F0;
+    --line-subtle: #ECF0F7;
+    --navy: #13244A;
+    --navy-hi: #1D3470;
+    --navy-deep: #0C1730;
+    --maroon: #8B2332;
+    --maroon-subtle: #FDF3F5;
+    --maroon-border: #F5D5DA;
+    --gold: #96702A;
+    --gold-subtle: #FBF8F0;
+    --gold-border: #E8DDCA;
+    --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --shadow-card: 0 1px 3px rgba(14,26,51,0.03), 0 14px 34px -18px rgba(14,26,51,0.14);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .page {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 16px 14px calc(118px + env(safe-area-inset-bottom));
+  }
+  @media (min-width: 380px) {
+    .page { padding: 18px 16px calc(120px + env(safe-area-inset-bottom)); }
+  }
+
+  .stack { display: flex; flex-direction: column; gap: 14px; }
+
+  /* SVG Icons */
+  .ic {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.85;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex: none;
+  }
+  .ic.fill { fill: currentColor; stroke: none; }
+
+  /* Entrance */
+  .rise {
+    animation: rise .6s cubic-bezier(.16, 1, .3, 1) both;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* TOP BAR & BRAND IDENTITY */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding: 2px 2px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+  }
+  .brand img {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+  .brand img[hidden], .brand-identity[hidden] { display: none; }
+
+  .brand-identity {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .brand-seal {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-hi) 100%);
+    display: grid;
+    place-items: center;
+    color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(19,36,74,0.18);
+    flex: none;
+  }
+  .brand-seal svg {
+    width: 20px;
+    height: 20px;
+    color: #F8FAFD;
+  }
+  .brand-text { display: flex; flex-direction: column; }
+  .wordmark {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: .15em;
+    color: var(--maroon);
+    line-height: 1;
+  }
+  .wordmark-sub {
+    font-size: 8.5px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 3.5px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(14,26,51,0.04);
+  }
+  .chip .ic { width: 13px; height: 13px; color: var(--maroon); }
+
+  /* CARDS */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+  }
+  @media (max-width: 350px) {
+    .card { padding: 16px; border-radius: 18px; }
+  }
+
+  /* 1. HERO SECTION */
+  .hero-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .photo-frame {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 22px;
+    flex: none;
+    padding: 3px;
+    background: linear-gradient(145deg, #FFFFFF, var(--surface-tint));
+    border: 1px solid var(--line);
+    box-shadow: 0 6px 18px -4px rgba(19,36,74,0.14), 0 1px 3px rgba(19,36,74,0.06);
+  }
+  .photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-hi) 100%);
+  }
+  .photo-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .photo-fallback .initials {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: 1;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  }
+  .photo-fallback .monogram-accent {
+    width: 20px;
+    height: 1.5px;
+    background: rgba(255,255,255,0.4);
+    margin-top: 5px;
+    border-radius: 999px;
+  }
+  .photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+  }
+
+  .hero-meta { flex: 1; min-width: 0; }
+  .partner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: var(--maroon-subtle);
+    border: 1px solid var(--maroon-border);
+    margin-bottom: 7px;
+  }
+  .partner-badge-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--maroon);
+    flex: none;
+  }
+  .role {
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--maroon);
+    white-space: nowrap;
+    line-height: 1.2;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 1.08;
+    letter-spacing: -.015em;
+    color: var(--ink);
+  }
+  .hero-sub {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--ink-3);
+    margin-top: 4px;
+    letter-spacing: .01em;
+  }
+
+  .tagline-wrap {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: var(--surface-subtle);
+    border: 1px solid var(--line-subtle);
+  }
+  .tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16.5px;
+    line-height: 1.42;
+    color: var(--ink-2);
+    text-wrap: balance;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 14px;
+    border-radius: 14px;
+    border: 0;
+    font: 700 13.5px/1 var(--sans);
+    cursor: pointer;
+    transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active { transform: scale(.98); }
+  .btn:focus-visible, .dock a:focus-visible, .dock button:focus-visible {
+    outline: 2px solid var(--navy);
+    outline-offset: 2px;
+  }
+  .btn-primary {
+    background: var(--navy);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px -2px rgba(19,36,74,0.25);
+  }
+  .btn-primary:hover { background: var(--navy-hi); }
+  .btn-outline {
+    background: var(--surface);
+    color: var(--navy);
+    border: 1.5px solid var(--navy);
+  }
+  .btn-outline:hover { background: var(--surface-tint); }
+  .btn-ghost {
+    background: var(--surface-tint);
+    color: var(--navy);
+    min-height: 44px;
+    font-size: 13px;
+    border: 1px solid var(--line);
+  }
+  .btn-ghost:hover { background: #E4EAF4; }
+
+  /* 2. DEMAT CTA */
+  .cta {
+    background: linear-gradient(155deg, var(--navy-hi) 0%, var(--navy) 60%, var(--navy-deep) 100%);
+    color: #FFFFFF;
+    border-radius: 22px;
+    padding: 22px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 18px 36px -16px rgba(12,23,48,0.6);
+  }
+  .cta-body { flex: 1; min-width: 0; }
+  .eyebrow-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.92);
+  }
+  .cta h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 1.15;
+    margin-top: 10px;
+    color: #FFFFFF;
+  }
+  .cta p {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.8);
+    margin-top: 8px;
+  }
+  .cta-perks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-top: 10px;
+  }
+  .cta-perk {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.92);
+  }
+  .cta-perk .ic { width: 12px; height: 12px; color: #5EEAD4; }
+
+  .btn-white {
+    background: #FFFFFF;
+    color: var(--navy);
+    min-height: 46px;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 13.5px;
+    font-weight: 800;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.16);
+  }
+  .btn-white:hover { background: #F8FAFD; }
+  .qr {
+    display: none;
+    flex: none;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+  }
+  .qr.on { display: block; }
+  .qr img, .qr canvas { width: 100% !important; height: 100% !important; display: block; }
+
+  /* 3. SERVICES SECTION */
+  .services-card { padding: 20px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line-subtle);
+  }
+  .section-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .section-tag {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--surface-tint);
+    padding: 2px 7px;
+    border-radius: 6px;
+  }
+
+  .service-category {
+    margin-bottom: 18px;
+  }
+  .service-category:last-child {
+    margin-bottom: 0;
+  }
+  .category-bar {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 10px;
+    padding: 4px 0;
+  }
+  .category-icon-box {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--maroon-subtle);
+    border: 1px solid var(--maroon-border);
+    color: var(--maroon);
+    display: grid;
+    place-items: center;
+    flex: none;
+  }
+  .category-icon-box.inv {
+    background: var(--gold-subtle);
+    border-color: var(--gold-border);
+    color: var(--gold);
+  }
+  .category-icon-box.trade {
+    background: var(--surface-tint);
+    border-color: #D6E2F5;
+    color: var(--navy);
+  }
+  .category-icon-box .ic { width: 15px; height: 15px; }
+
+  .category-title {
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .service-item {
+    background: var(--surface-subtle);
+    border: 1px solid var(--line-subtle);
+    border-radius: 12px;
+    padding: 9px 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 46px;
+  }
+  .service-item.span-2 {
+    grid-column: 1 / -1;
+  }
+  .service-name {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .service-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ink-3);
+    margin-top: 2px;
+    letter-spacing: .02em;
+  }
+
+  /* 4. PARTNERS */
+  .partners-card { padding: 20px; }
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  @media (min-width: 360px) {
+    .partners-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .partners-grid .partner-pill:nth-child(4) {
+      grid-column: span 1;
+    }
+    .partners-grid .partner-pill:nth-child(5) {
+      grid-column: span 2;
+    }
+  }
+  .partner-pill {
+    background: var(--surface-subtle);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .partner-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--maroon);
+    flex: none;
+    opacity: .85;
+  }
+  .partner-name {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: .01em;
+    white-space: nowrap;
+  }
+
+  /* 5. CONTACT */
+  .contact-card { padding: 20px; }
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 14px;
+    background: var(--surface-subtle);
+    border: 1px solid var(--line-subtle);
+    transition: background .2s ease;
+  }
+  a.contact-entry:hover {
+    background: var(--surface-tint);
+  }
+  .contact-icon-box {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--navy);
+    display: grid;
+    place-items: center;
+    flex: none;
+    box-shadow: 0 1px 3px rgba(14,26,51,0.04);
+  }
+  .contact-info { flex: 1; min-width: 0; }
+  .contact-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 2px;
+  }
+  .contact-val {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    word-break: break-word;
+  }
+  .contact-val.num {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: .01em;
+  }
+  .address-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .address-line {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-2);
+    line-height: 1.4;
+  }
+  .address-line.highlight {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .btn-directions {
+    background: var(--navy);
+    color: #FFFFFF;
+    width: 100%;
+    margin-top: 12px;
+    min-height: 48px;
+    font-size: 13.5px;
+    font-weight: 800;
+    box-shadow: 0 4px 12px -2px rgba(19,36,74,0.22);
+  }
+  .btn-directions:hover {
+    background: var(--navy-hi);
+  }
+
+  /* 6. LEGAL FOOTER */
+  .legal {
+    padding: 10px 12px 0;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--ink-3);
+  }
+  .legal b {
+    display: block;
+    color: var(--ink-2);
+    font-weight: 700;
+    font-size: 10.5px;
+    margin-bottom: 3px;
+    letter-spacing: .01em;
+  }
+
+  /* FLOATING DOCK */
+  .dock {
+    position: fixed;
+    left: 50%;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    z-index: 25;
+    width: min(calc(100% - 24px), 416px);
+    padding: 6px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    background: rgba(255,255,255,0.92);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--line);
+    box-shadow: 0 16px 36px -10px rgba(14,26,51,0.28);
+    transform: translate(-50%, 160%);
+    transition: transform .45s cubic-bezier(.16, 1, .3, 1);
+  }
+  .dock.show { transform: translate(-50%, 0); }
+  .dock a, .dock button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-height: 48px;
+    padding: 6px 2px;
+    border: 0;
+    border-radius: 14px;
+    background: none;
+    color: var(--navy);
+    font: 700 10.5px/1 var(--sans);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background .15s ease;
+  }
+  .dock a:active, .dock button:active { background: var(--surface-tint); }
+  .dock .dock-wa {
+    background: var(--navy);
+    color: #FFFFFF;
+  }
+  .dock .dock-wa:active { background: var(--navy-hi); }
+  .dock .ic { width: 18px; height: 18px; }
+
+  /* TOAST */
+  .toast {
+    position: fixed;
+    left: 50%;
+    top: 18px;
+    z-index: 40;
+    transform: translate(-50%, -80px);
+    opacity: 0;
+    background: var(--navy);
+    color: #FFFFFF;
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px -6px rgba(12,23,48,0.4);
+    transition: transform .35s cubic-bezier(.16, 1, .3, 1), opacity .25s ease;
+    pointer-events: none;
+  }
+  .toast.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+
+  /* RESPONSIVE FINE-TUNING */
+  @media (max-width: 360px) {
+    h1 { font-size: 27px; }
+    .photo-frame { width: 80px; height: 80px; border-radius: 18px; }
+    .photo { border-radius: 15px; }
+    .photo-fallback .initials { font-size: 26px; }
+    .qr { width: 88px; height: 88px; }
+    .service-grid { grid-template-columns: 1fr; }
+    .service-item.span-2 { grid-column: auto; }
+    .wordmark { font-size: 18px; }
+    .partners-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise { animation: none; }
+    .dock, .toast, .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG Icon Sprite -->
+<svg width="0" height="0" style="position:absolute; display:none;" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .7 3a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c1 .4 2 .6 3 .7a2 2 0 011.6 2z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm5.6 14.2c-.2.6-1.2 1.1-1.8 1.2-.5.1-1 .1-3.3-.7-2.8-1.1-4.6-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.8 1.8.1.1.1.3 0 .5-.1.2-.2.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.7 1.6.3.1.5.1.7-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1l1.6.8c.2.1.4.2.5.3.1.2.1.9-.1 1.5z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.6 7-12a7 7 0 10-14 0c0 5.4 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2.5"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path d="M15 19v-1a4 4 0 00-4-4H7a4 4 0 00-4 4v1"/><circle cx="9" cy="8" r="3.5"/><path d="M19 8v6M16 11h6"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.6M8.2 13.2l7.6 4.6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-chart-grow" viewBox="0 0 24 24"><path d="M3 20h18"/><path d="m19 7-7 7-4-4-5 5"/><path d="M14 7h5v5"/></symbol>
+  <symbol id="i-exchange" viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M8 15V9"/><path d="M6 11h4v4H6z"/><path d="M14 17V3"/><path d="M18 13V7"/><path d="M16 9h4v4h-4z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+</svg>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<main class="page">
+
+  <!-- TOP BAR / BRAND HEADER -->
+  <header class="topbar rise" style="--i:0">
+    <div class="brand">
+      <img src="nishiv-logo.png" alt="Nishiv Investment &amp; Insurance" hidden
+           onload="this.hidden=false; this.nextElementSibling.hidden=true;">
+      <div class="brand-identity">
+        <div class="brand-seal" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z"/>
+            <path d="M9 16V9l6 6V9"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="wordmark">NISHIV</div>
+          <div class="wordmark-sub">Investment &amp; Insurance</div>
+        </div>
+      </div>
+    </div>
+    <div class="chip">
+      <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+      <span>AMFI Registered MFD</span>
+    </div>
+  </header>
+
+  <div class="stack">
+
+    <!-- 1. HERO SECTION -->
+    <section class="card hero-card rise" style="--i:1">
+      <div class="hero-top">
+        <div class="photo-frame">
+          <div class="photo">
+            <div class="photo-fallback">
+              <span class="initials">AP</span>
+              <span class="monogram-accent"></span>
+            </div>
+            <img src="aniket.jpg" alt="Aniket Patel" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="hero-meta">
+          <div class="partner-badge">
+            <span class="partner-badge-dot"></span>
+            <span class="role">Angel One Channel Partner</span>
+          </div>
+          <h1>Aniket Patel</h1>
+          <div class="hero-sub">Financial Planner &amp; Advisor</div>
+        </div>
+      </div>
+
+      <div class="tagline-wrap">
+        <p class="tagline">All your financial planning, on one platform.</p>
+      </div>
+
+      <div class="actions" id="heroActions">
+        <a class="btn btn-primary" data-wa target="_blank" rel="noopener"><svg class="ic fill"><use href="#i-wa"/></svg>WhatsApp</a>
+        <a class="btn btn-outline" data-call><svg class="ic"><use href="#i-phone"/></svg>Call</a>
+        <button class="btn btn-ghost" data-save type="button"><svg class="ic"><use href="#i-save"/></svg>Save contact</button>
+        <button class="btn btn-ghost" data-share type="button"><svg class="ic"><use href="#i-share"/></svg>Share card</button>
+      </div>
+    </section>
+
+    <!-- 2. DEMAT CTA -->
+    <section class="cta rise" style="--i:2">
+      <div class="cta-body">
+        <div class="eyebrow-pill">Angel One · Demat &amp; Trading</div>
+        <h2>Open a free Demat &amp; trading account</h2>
+        <p>Stocks, commodities, IPOs, mutual funds and bonds — with personal guidance from Aniket.</p>
+        <div class="cta-perks">
+          <span class="cta-perk"><svg class="ic"><use href="#i-check"/></svg>Zero Account Opening</span>
+          <span class="cta-perk"><svg class="ic"><use href="#i-check"/></svg>Personal Portfolio Support</span>
+        </div>
+        <a class="btn btn-white" id="dematBtn">Open account<svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="qr" id="qr" aria-label="Scan to open an Angel One account"></div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section class="card services-card rise" style="--i:3">
+      <div class="section-header">
+        <span class="section-title">Specialized Services</span>
+        <span class="section-tag">Comprehensive</span>
+      </div>
+
+      <!-- Insurance -->
+      <div class="service-category">
+        <div class="category-bar">
+          <div class="category-icon-box">
+            <svg class="ic"><use href="#i-shield-check"/></svg>
+          </div>
+          <span class="category-title">Insurance</span>
+        </div>
+        <div class="service-grid">
+          <div class="service-item">
+            <span class="service-name">Life insurance</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Term plan</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Health insurance</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Car insurance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Investments -->
+      <div class="service-category">
+        <div class="category-bar">
+          <div class="category-icon-box inv">
+            <svg class="ic"><use href="#i-chart-grow"/></svg>
+          </div>
+          <span class="category-title">Investments</span>
+        </div>
+        <div class="service-grid">
+          <div class="service-item">
+            <span class="service-name">SIP</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Mutual funds</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Unlisted shares</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Other investments</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trading with Angel One -->
+      <div class="service-category">
+        <div class="category-bar">
+          <div class="category-icon-box trade">
+            <svg class="ic"><use href="#i-exchange"/></svg>
+          </div>
+          <span class="category-title">Trading with Angel One</span>
+        </div>
+        <div class="service-grid">
+          <div class="service-item">
+            <span class="service-name">Stocks</span>
+            <span class="service-badge">NSE · BSE</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Commodities</span>
+            <span class="service-badge">MCX · NCDEX</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">IPO &amp; NFO</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Bonds</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Investment baskets</span>
+            <span class="service-badge">Smallcase</span>
+          </div>
+          <div class="service-item">
+            <span class="service-name">PMS</span>
+            <span class="service-badge">Portfolio management</span>
+          </div>
+          <div class="service-item span-2">
+            <span class="service-name">Intraday &amp; delivery guidance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INSURANCE PARTNERS -->
+    <section class="card partners-card rise" style="--i:4">
+      <div class="section-header">
+        <span class="section-title">Insurance Partners</span>
+        <span class="section-tag">Authorized</span>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-pill">
+          <span class="partner-dot"></span>
+          <span class="partner-name">Digit</span>
+        </div>
+        <div class="partner-pill">
+          <span class="partner-dot"></span>
+          <span class="partner-name">HDFC Life</span>
+        </div>
+        <div class="partner-pill">
+          <span class="partner-dot"></span>
+          <span class="partner-name">Tata AIA</span>
+        </div>
+        <div class="partner-pill">
+          <span class="partner-dot"></span>
+          <span class="partner-name">ICICI Prudential</span>
+        </div>
+        <div class="partner-pill">
+          <span class="partner-dot"></span>
+          <span class="partner-name">Manipal Cigna</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT SECTION -->
+    <section class="card contact-card rise" style="--i:5">
+      <div class="section-header">
+        <span class="section-title">Get in Touch</span>
+        <span class="section-tag">Direct Access</span>
+      </div>
+
+      <div class="contact-list">
+        <a class="contact-entry" data-call>
+          <div class="contact-icon-box">
+            <svg class="ic"><use href="#i-phone"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-label">Direct Phone</div>
+            <div class="contact-val num" data-phone-text></div>
+          </div>
+        </a>
+
+        <a class="contact-entry" data-mail>
+          <div class="contact-icon-box">
+            <svg class="ic"><use href="#i-mail"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-label">Official Email</div>
+            <div class="contact-val" data-email-text></div>
+          </div>
+        </a>
+
+        <div class="contact-entry">
+          <div class="contact-icon-box">
+            <svg class="ic"><use href="#i-pin"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-label">Office Address</div>
+            <div class="address-block">
+              <span class="address-line highlight">FF-3, Dharti Saket Heaven</span>
+              <span class="address-line">Near Savan Square, Chenpur Road</span>
+              <span class="address-line">New Ranip, Ahmedabad, Gujarat 382470</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-directions" data-map target="_blank" rel="noopener">
+        <svg class="ic"><use href="#i-pin"/></svg>
+        <span>Get Directions on Google Maps</span>
+      </a>
+    </section>
+
+    <!-- 6. LEGAL FOOTER -->
+    <footer class="legal rise" style="--i:6">
+      <b>Nishiv Investment &amp; Insurance · Ahmedabad</b>
+      Mutual fund investments are subject to market risks. Read all scheme related documents carefully. Insurance is the subject matter of solicitation.
+    </footer>
+
+  </div>
+</main>
+
+<!-- FLOATING DOCK -->
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <a data-call><svg class="ic"><use href="#i-phone"/></svg><span>Call</span></a>
+  <a class="dock-wa" data-wa target="_blank" rel="noopener"><svg class="ic fill"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  <a data-map target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg><span>Map</span></a>
+  <button data-save type="button"><svg class="ic"><use href="#i-save"/></svg><span>Save</span></button>
+</nav>
+
+<script>
+  /* ============ CLIENT CONFIG ============ */
+  const CONFIG = {
+    firstName:  "Aniket",
+    middleName: "Arvindbhai",
+    lastName:   "Patel",
+    org:        "Nishiv Investment & Insurance",
+    title:      "Angel One Channel Partner",
+    phone:      "+919913339389",
+    phoneText:  "+91 99133 39389",
+    email:      "aniketpatel090990@gmail.com",
+    street:     "FF-3, Dharti Saket Heaven, Near Savan Square, Chenpur Road, New Ranip",
+    city:       "Ahmedabad",
+    region:     "Gujarat",
+    zip:        "382470",
+    country:    "India",
+    dematLink:  ""   // Paste the Angel One referral / account-opening link here (QR appears automatically)
+  };
+  /* ======================================= */
+
+  const $  = s => document.querySelector(s);
+  const $$ = s => document.querySelectorAll(s);
+  const wa = text => `https://wa.me/${CONFIG.phone.replace(/\D/g,'')}?text=${encodeURIComponent(text)}`;
+
+  $$('[data-wa]').forEach(a => a.href = wa(`Hi ${CONFIG.firstName}, I found your digital card and would like to know more about your investment & insurance services.`));
+  $$('[data-call]').forEach(a => a.href = 'tel:' + CONFIG.phone);
+  $$('[data-mail]').forEach(a => a.href = 'mailto:' + CONFIG.email);
+  $$('[data-phone-text]').forEach(e => e.textContent = CONFIG.phoneText);
+  $$('[data-email-text]').forEach(e => e.textContent = CONFIG.email);
+  $$('[data-map]').forEach(a => a.href = 'https://www.google.com/maps/search/?api=1&query=' +
+    encodeURIComponent(`${CONFIG.street}, ${CONFIG.city} ${CONFIG.zip}`));
+
+  /* Demat CTA referral link + QR */
+  const dematBtn = $('#dematBtn');
+  if (CONFIG.dematLink) {
+    dematBtn.href = CONFIG.dematLink;
+    dematBtn.target = '_blank';
+    dematBtn.rel = 'noopener';
+    $('#qr').classList.add('on');
+    if (window.QRCode) {
+      new QRCode($('#qr'), {
+        text: CONFIG.dematLink,
+        width: 180,
+        height: 180,
+        colorDark: '#0E1A33',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.M
+      });
+    }
+  } else {
+    dematBtn.href = wa(`Hi ${CONFIG.firstName}, I would like to open a free Demat & Trading account with Angel One.`);
+    dematBtn.target = '_blank';
+    dematBtn.rel = 'noopener';
+  }
+
+  /* Toast notification */
+  const toastEl = $('#toast');
+  let toastTimer;
+  const toast = msg => {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2200);
+  };
+
+  /* vCard Download */
+  const esc = s => String(s).replace(/([\\,;])/g, '\\$1');
+  $$('[data-save]').forEach(b => b.addEventListener('click', () => {
+    const lines = [
+      'BEGIN:VCARD', 'VERSION:3.0',
+      `N:${esc(CONFIG.lastName)};${esc(CONFIG.firstName)};${esc(CONFIG.middleName)};;`,
+      `FN:${esc(CONFIG.firstName + ' ' + CONFIG.lastName)}`,
+      `ORG:${esc(CONFIG.org)}`, `TITLE:${esc(CONFIG.title)}`,
+      `TEL;TYPE=CELL:${CONFIG.phone}`, `EMAIL;TYPE=INTERNET:${CONFIG.email}`,
+      `ADR;TYPE=WORK:;;${esc(CONFIG.street)};${esc(CONFIG.city)};${esc(CONFIG.region)};${CONFIG.zip};${esc(CONFIG.country)}`,
+      'END:VCARD'
+    ];
+    const blob = new Blob([lines.join('\r\n')], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${CONFIG.firstName}-${CONFIG.lastName}.vcf`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    toast('Contact file downloaded');
+  }));
+
+  /* Web Share / Link Copy */
+  $$('[data-share]').forEach(b => b.addEventListener('click', async () => {
+    const data = {
+      title: `${CONFIG.firstName} ${CONFIG.lastName} · ${CONFIG.org}`,
+      text: 'Digital business card',
+      url: location.href
+    };
+    try {
+      if (navigator.share) {
+        await navigator.share(data);
+      } else {
+        await navigator.clipboard.writeText(location.href);
+        toast('Link copied to clipboard');
+      }
+    } catch (e) { /* user dismissed share dialog */ }
+  }));
+
+  /* Floating Dock Observer */
+  const dock = $('#dock');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      dock.classList.toggle('show', !entry.isIntersecting && entry.boundingClientRect.top < 0);
+    }, { threshold: 0 }).observe($('#heroActions'));
+  } else {
+    dock.classList.add('show');
+  }
+</script>
+</body>
+</html>
